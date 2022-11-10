@@ -1,34 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
+    <>
+      <div className="container">
+        <a className="logo">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
+            alt="logo"
+            className="logo-img"
+          />
         </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <div className="login">
+          <h1 className="login_title">Iniciar Sesión</h1>
+          <div className="login_group">
+            <input type="text" className="login_input" placeholder="Email" />
+            <input
+              type="password"
+              className="login_input"
+              placeholder="Password"
+            />
+            <button className="login_sing-in">Iniciar Sesión</button>
+          </div>
+          <div className="login_secondary">
+            <a href="#">
+              <input type="checkbox" className="checkbox"></input>Recordarme
+            </a>
+            <a href="#">¿Necitas ayuda?</a>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className="footer-center">
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+        <div className="footery">
+          <a href="#" className="footer-question">
+            ¿Preguntas? Llama al 0800 345 1593
+          </a>
+          <div className="footer-links">
+            <p href="#">Preguntas frecuentes</p>
+            <a href="#">Centro de ayuda</a>
+            <a href="#">Términos de uso</a>
+          </div>
+        </div>
+    </>
+  );
 }
-
-export default App
